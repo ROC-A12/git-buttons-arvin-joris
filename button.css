@@ -14,8 +14,9 @@ body {
 }
 
 #myButton {
-    color: black;
-    background-color: lightgray;
+    color: rgb(144, 0, 255);
+    background-color: rgb(255, 193, 245);
+    border-bottom: 2;
     font-weight: bold;
 }
 
