@@ -4,9 +4,9 @@ const motds = [
   "Friday the 13!",
   "it's all Ogre now",
   "More than 999 sold!",
-  "やる?",
+  "Yaru?",
   "i used to be an andevterur like you. until i took an arrow to the knee",
-  "c’est la vie",
+  "cest la vie",
 ];
 
 const getRandomInt = function (min, max) {
