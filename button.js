@@ -1,37 +1,36 @@
 const motds = [
-    "Try the mushroom stew!",
-    "Awesome!",
-    "GOTY!",
-    "Limited edition!",
-    "It's here!",
-    "More than 500 sold!",
-    "Holy cow, man!",
-    "The bee's knees!",
-    "Ceci n'est pas une title screen!",
+  "Foul Tarnish!",
+  "It's me, Mario",
+  "Friday the 13!",
+  "it's all Ogre now",
+  "More than 999 sold!",
+  "やる?",
+  "i used to be an andevterur like you. until i took an arrow to the knee",
+  "c’est la vie",
 ];
 
-const getRandomInt = function(min, max) {
-    const minCeiled = Math.ceil(min);
-    const maxFloored = Math.floor(max);
+const getRandomInt = function (min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
 
-    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-}
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+};
 
-const showRandomMessage = function() {
-    const messageContainer = document.querySelector("#myMessage");
-    
-    const currentMessage = messageContainer.innerText;
-    const filteredMessages = motds.filter((motd) => motd !== currentMessage);
-    const randomIndex = getRandomInt(0, filteredMessages.length);
+const showRandomMessage = function () {
+  const messageContainer = document.querySelector("#myMessage");
 
-    messageContainer.innerText = filteredMessages[randomIndex];
-}
+  const currentMessage = messageContainer.innerText;
+  const filteredMessages = motds.filter((motd) => motd !== currentMessage);
+  const randomIndex = getRandomInt(0, filteredMessages.length);
 
-const addButtonClickEvent = function() {
-    const buttonElement = document.querySelector("#myButton");
+  messageContainer.innerText = filteredMessages[randomIndex];
+};
 
-    buttonElement.addEventListener("click", showRandomMessage);
-}
+const addButtonClickEvent = function () {
+  const buttonElement = document.querySelector("#myButton");
+
+  buttonElement.addEventListener("click", showRandomMessage);
+};
 
 document.addEventListener("DOMContentLoaded", addButtonClickEvent);
 document.addEventListener("DOMContentLoaded", showRandomMessage);
